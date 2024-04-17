@@ -91,4 +91,13 @@ This is the place for you to write reflections:
 
 #### Reflection Publisher-2
 
+1. Memisahkan "Service" dan "Repository" dari Model dalam pola Model-View-Controller (MVC) mengikuti prinsip pemisahan kepentingan. Setiap komponen dalam aplikasi seharusnya memiliki tanggung jawab tunggal, dan memisahkan kepentingan seperti akses data dan logika bisnis dari Model meningkatkan modularitas, keberlanjutan, dan kemampuan pengujian.
+
+    Memisahkan Service dari Repository dalam pola desain Model-View-Controller (MVC) adalah suatu keharusan untuk mematuhi prinsip tanggung jawab tunggal. Service bertugas mengelola logika bisnis dan pemrosesan data yang diperoleh dari Repository, sementara Repository bertindak sebagai antarmuka untuk mengakses dan mengubah data dalam database. Dengan memisahkan kedua lapisan ini, struktur kode menjadi lebih terorganisir, lebih mudah dimengerti, dan lebih mudah untuk dipelihara.
+
+
+2. Jika hanya menggunakan Model tanpa Service dan Repository, maka akan terjadi ketergantungan yang kuat antara komponen-komponen tersebut. Hal ini akan menyebabkan kesulitan dalam melakukan perubahan karena setiap modifikasi pada Model akan berdampak pada seluruh kode. Dampaknya adalah meningkatnya kompleksitas dan penurunan fleksibilitas dalam pengembangan dan pemeliharaan kode.
+
+3. Postman adalah alat yang sangat berguna untuk menguji dan memvalidasi fungsionalitas aplikasi yang dikembangkan. Dengan Postman, kita dapat mengirimkan permintaan HTTP ke berbagai endpoint dalam aplikasi, dan memeriksa respon yang diterima untuk memastikan keakuratan dan konsistensi data. Fitur CRUD memungkinkan kita menguji operasi dasar seperti membuat, membaca, memperbarui, dan menghapus data. Kemampuan untuk menyesuaikan permintaan dan melihat respons secara langsung membantu dalam menguji dan memperbaiki aplikasi dengan cepat dan efisien.
+
 #### Reflection Publisher-3
