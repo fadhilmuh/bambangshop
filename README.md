@@ -77,6 +77,17 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. **Observer Pattern and the need for an interface/trait**:
+
+    Dalam kasus BambangShop, tidak perlu menggunakan interface atau trait untuk Observer pattern karena hanya terdapat satu jenis observer, yaitu Subscriber. Namun, jika di masa depan ada penambahan jenis observer baru, menggunakan trait akan lebih fleksibel.
+
+2. **Uniqueness of ID and URL**: 
+
+    Penggunaan DashMap lebih disarankan daripada Vec karena memungkinkan pemetaan yang lebih baik antara id program dan url subscriber. Dengan DashMap, kita dapat dengan mudah menghubungkan setiap jenis produk ke setiap subscriber yang berlangganan. Menggunakan Vec akan memerlukan struktur data tambahan yang dapat menyulitkan dalam pengelolaan dan pembaruan data.
+
+3. **Thread safety and Singleton pattern**: 
+
+    Dalam konteks keamanan multithreading Rust, penggunaan DashMap merupakan pilihan yang tepat karena telah dioptimalkan untuk lingkungan multithreaded. DashMap memastikan operasi pada map SUBSCRIBERS dapat dilakukan dengan aman dan efisien oleh banyak thread. Meskipun Singleton pattern dapat memastikan hanya ada satu instance dari objek yang dibuat, hal itu tidak menjamin thread safety seperti yang disediakan oleh DashMap. Dengan menggunakan DashMap, kita dapat memastikan bahwa daftar subscriber terhadap produk kita dikelola secara thread-safe dan efisien.
 
 #### Reflection Publisher-2
 
