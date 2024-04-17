@@ -101,3 +101,9 @@ This is the place for you to write reflections:
 3. Postman adalah alat yang sangat berguna untuk menguji dan memvalidasi fungsionalitas aplikasi yang dikembangkan. Dengan Postman, kita dapat mengirimkan permintaan HTTP ke berbagai endpoint dalam aplikasi, dan memeriksa respon yang diterima untuk memastikan keakuratan dan konsistensi data. Fitur CRUD memungkinkan kita menguji operasi dasar seperti membuat, membaca, memperbarui, dan menghapus data. Kemampuan untuk menyesuaikan permintaan dan melihat respons secara langsung membantu dalam menguji dan memperbaiki aplikasi dengan cepat dan efisien.
 
 #### Reflection Publisher-3
+
+1. Dalam tutorial ini, pendekatan yang digunakan adalah model push dari Observer Pattern. Hal ini tercermin dalam algoritma, di mana ketika ada perubahan pada objek seperti pembuatan, penghapusan, atau pembaruan, layanan notifikasi akan mengaktifkan metode yang memberi tahu semua subscriber tentang perubahan tersebut.
+
+2. Jika kita menggunakan metode pull, setiap subscriber harus secara aktif memeriksa apakah ada perubahan data yang relevan bagi mereka. Keuntungannya adalah observer memiliki kendali penuh atas data yang mereka ambil dan kapan mereka mengambilnya. Namun, kerugiannya adalah observer perlu memahami dengan cukup baik struktur data sumbernya untuk dapat melakukan tugas tersebut.
+
+3. Jika kita memutuskan untuk tidak menerapkan multi-threading dalam proses notifikasi, maka akan terjadi penundaan saat NotificationService harus memberi tahu setiap subscriber. Situasi ini dapat mengakibatkan antrian panjang ketika jumlah subscriber sangat besar, dan dapat menyebabkan keterbatasan dalam pengiriman notifikasi kepada setiap subscriber karena terkendala oleh keterbatasan komputasi yang ada.
